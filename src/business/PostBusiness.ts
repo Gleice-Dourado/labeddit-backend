@@ -1,4 +1,4 @@
-import { CommentDatabase } from "../database/CommnetDatabase";
+import { CommentDatabase } from "../database/CommentDatabase";
 import { LikesDislikesDatabase } from "../database/LikesDislikesDatabase";
 import { PostDatabase } from "../database/PostDatabase";
 import { CreateCommentInputDTO, CreateCommentOutputDTO } from "../dtos/comment/comment.dto";
@@ -35,7 +35,7 @@ export class PostBusiness{
         };
 
         const newPost = new Post(
-            this.idGenerator.generate(),
+            this.idGenerator.generateId(),
             payload.id,
             content,
             0,
@@ -294,7 +294,7 @@ export class PostBusiness{
         await this.postDatabase.updatePost(postDB.postToDBModel());
 
         const newComment = new Comment(
-            this.idGenerator.generate(),
+            this.idGenerator.generateId(),
             payload.id,
             id,
             content,
