@@ -3,15 +3,15 @@ import { GetPostDB, PostDB } from "../models/Post";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class PostDatabase extends BaseDatabase {
-    TABLE_POSTS = 'posts'
+    TABLE_NAME = 'posts'
 
     public async createPost(newPost:PostDB):Promise<void>{
-        await BaseDatabase.connection(this.TABLE_POSTS)
+        await BaseDatabase.connection(this.TABLE_NAME)
             .insert(newPost)
     };
 
     public async getPosts():Promise<GetPostDB[]>{
-        const result:GetPostDB[] = await BaseDatabase.connection(this.TABLE_POSTS)
+        const result:GetPostDB[] = await BaseDatabase.connection(this.TABLE_NAME)
             .select(
                 'posts.id',
                 'posts.content',
@@ -35,20 +35,20 @@ export class PostDatabase extends BaseDatabase {
     };
 
     public async updatePost(editedPost:PostDB):Promise<void>{
-        await BaseDatabase.connection(this.TABLE_POSTS)
+        await BaseDatabase.connection(this.TABLE_NAME)
             .update(editedPost)
             .where({id: editedPost.id})
             .andWhere({creator_id: editedPost.creator_id});
     };
 
     public async deletePost(id:string):Promise<void>{
-        await BaseDatabase.connection(this.TABLE_POSTS)
+        await BaseDatabase.connection(this.TABLE_NAME)
             .del()
             .where({id})
     };
 
     public async editPostLikes(postId:string, newLikeDislikeCount:LikesDislikesCountDB):Promise<void>{
-        await BaseDatabase.connection(this.TABLE_POSTS)
+        await BaseDatabase.connection(this.TABLE_NAME)
             .update(
                 {
                     likes: newLikeDislikeCount.newLikeCount,

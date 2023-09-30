@@ -1,11 +1,11 @@
 import express from "express";
-import { PostBusiness } from "../src/business/PostBusiness";
-import { LikesDislikesDatabase } from "../src/database/LikesDislikesDatabase";
-import { PostDatabase } from "../src/database/PostDatabase";
-import { PostController } from "../src/controller/PostController";
-import { CommentDatabase } from "../src/database/CommnetDatabase";
-import { TokenManager } from "../src/services/tokenManager";
-import { IdGenerator } from "../src/services/IdGenerator";
+import { PostBusiness } from "../business/PostBusiness";
+import { LikesDislikesDatabase } from "../database/LikesDislikesDatabase";
+import { PostDatabase } from "../database/PostDatabase";
+import { PostController } from "../controller/PostController";
+import { CommentDatabase } from "../database/CommentDatabase";
+import { TokenManager } from "../services/tokenManager";
+import { IdGenerator } from "../services/IdGenerator";
 
 export const postRouter = express.Router();
 
