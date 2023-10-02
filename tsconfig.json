@@ -10,5 +10,10 @@
       "esModuleInterop": true,
       //"noEmitOnError": true, 
       "strict": true
+<<<<<<< HEAD
+  },
+  "exclude": ["./tests/*"] 
+=======
   }
+>>>>>>> ec312c2d40966a773179da8b8d4cf2d2e6b03548
 }
