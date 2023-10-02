@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
-      "target": "ES6",
-      "module": "commonjs",   
-      "sourceMap": true,       
-      "outDir": "./build",      
-      "rootDir": "./src",       
-      "removeComments": true,   
-      "noImplicitAny": true,      
-      "esModuleInterop": true,
-      //"noEmitOnError": true, 
-      "strict": true
-<<<<<<< HEAD
+    "target": "ES6",
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "./build",
+    "rootDir": "./src",
+    "removeComments": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    //"noEmitOnError": true, 
+    "strict": true
   },
-  "exclude": ["./tests/*"] 
-=======
-  }
->>>>>>> ec312c2d40966a773179da8b8d4cf2d2e6b03548
+  "exclude": [
+    "./tests/*"
+  ]
 }
