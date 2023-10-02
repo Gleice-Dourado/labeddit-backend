@@ -1,8 +1,8 @@
-import { LikesDislikesCountDB } from "../models/LikesDislikes";
-import { GetPostDB, PostDB } from "../models/Post";
-import { BaseDatabase } from "./BaseDatabase";
+import { BaseDatabase } from "../../src/database/BaseDatabase";
+import { LikesDislikesCountDB } from "../../src/models/LikesDislikes";
+import { GetPostDB, PostDB } from "../../src/models/Post";
 
-export class PostDatabase extends BaseDatabase {
+export class PostDatabaseMock extends BaseDatabase {
     TABLE_NAME = 'posts'
 
     public async createPost(newPost:PostDB):Promise<void>{

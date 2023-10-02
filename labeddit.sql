@@ -1,4 +1,5 @@
--- Active: 1695688226727@@127.0.0.1@3306
+-- Active: 1696096478020@@127.0.0.1@3306
+
 
 CREATE TABLE IF NOT EXISTS users(
     id TEXT PRIMARY KEY UNIQUE NOT NULL,
@@ -8,6 +9,16 @@ CREATE TABLE IF NOT EXISTS users(
     user_role VARCHAR(6) NOT NULL,
     created_at TEXT DEFAULT(DATETIME('now', 'localtime')) NOT NULL
 );
+
+INSERT INTO users (id, name, email, password, user_role, created_at)
+VALUES ('u004', 'hora', 'hora@example.com', '$2a$12$fSHlbNpAXlsC37uEEAsbP.wae2h0NFyLo11XtO0ii0FMTGff58Bj2', ' ADMIN',  '2023-09-29 12:10:32');
+
+INSERT INTO users (id, name, email, password, user_role, created_at)
+VALUES ('u001', 'Flora', 'flora@example.com', '$2a$12$fSHlbNpAXlsC37uEEAsbP.wae2h0NFyLo11XtO0ii0FMTGff58Bj2', 'ADMIN', '2023-09-30 15:02:32');
+
+INSERT INTO users (id, name, email, password, user_role, created_at)
+VALUES ('', 'Admin', 'admin@example.com', '$2a$12$fSHlbNpAXlsC37uEEAsbP.wae2h0NFyLo11XtO0ii0FMTGff58Bj2', 'ADMIN', '2023-09-29 12:10:32');
+
 
 CREATE TABLE IF NOT EXISTS posts(
     id TEXT PRIMARY KEY UNIQUE NOT NULL,
@@ -69,3 +80,6 @@ DROP TABLE posts;
 DROP TABLE likes_dislikes;
 DROP TABLE comments;
 DROP TABLE comments_likes_dislikes;
+
+
+

@@ -58,7 +58,7 @@ export class UserBusiness{
         const hashedPassword = await this.hashManager.hash(password);
 
         const newUser = new User(
-            this.idGenerator.generate(),
+            this.idGenerator.generateId(),
             name,
             email,
             hashedPassword,
@@ -88,14 +88,19 @@ export class UserBusiness{
 
         const checkUserDB = await this.userDatabase.findEmail(email);
 
+        console.log("checkuser", email, checkUserDB.email)
+
         if(!checkUserDB){
-            throw new NotFoundError('email or password not valid')
+            throw new NotFoundError('user not found')
         };
 
+        console.log("password", password, checkUserDB.password)
         const isPasswordValid = await this.hashManager.compare(password, checkUserDB.password);
 
+        console.log("password", password, checkUserDB.password)
+
         if(!isPasswordValid){
-            throw new BadRequestError('email or password not valid')
+            throw new BadRequestError('password is invalid')
         };
 
         const user = new User(

@@ -1,8 +1,8 @@
-import { UserDB } from "../models/User";
-import { BaseDatabase } from "./BaseDatabase";
+import { BaseDatabase } from "../../src/database/BaseDatabase";
+import { UserDB } from "../../src/models/User";
 
 
-export class UserDatabase extends BaseDatabase {
+export class UserDatabaseMock extends BaseDatabase {
     TABLE_NAME = 'users'
 
     public async findUsers(q:string|undefined):Promise<UserDB[]>{

@@ -1,10 +1,10 @@
 import express from "express";
-import { UserBusiness } from "../src/business/UserBusiness";
-import { UserController } from "../src/controller/UserController";
-import { UserDatabase } from "../src/database/UserDatabase";
-import { IdGenerator } from "../src/services/IdGenerator";
-import { HashManager } from "../src/services/hashManager";
-import { TokenManager } from "../src/services/tokenManager";
+import { UserBusiness } from "../business/UserBusiness";
+import { UserController } from "../controller/UserController";
+import { UserDatabase } from "../database/UserDatabase";
+import { IdGenerator } from "../services/IdGenerator";
+import { HashManager } from "../services/hashManager";
+import { TokenManager } from "../services/tokenManager";
 
 export const userRouter = express.Router();
 
