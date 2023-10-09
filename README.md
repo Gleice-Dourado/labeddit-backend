@@ -6,7 +6,7 @@ API para gerenciar o banco de dados de uma rede social, que inclui informações
 Para os usuários, a API permite se cadastrar como um novo usuário, fazer login como um usuário existente e obter informações de todos os usuários se a conta for do tipo "ADMIN".
 Para as postagens, a API permite criar, buscar, editar, excluir, curtir/não curtir e comentar as postagens existentes no banco de dados.
 
-[Documentação]()
+[Documentação]( )
 
 [Repositório front-end](https://github.com/Gleice-Dourado/labeddit-frontend.git)
 
