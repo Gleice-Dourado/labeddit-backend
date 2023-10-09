@@ -8,6 +8,8 @@ Para as postagens, a API permite criar, buscar, editar, excluir, curtir/não cur
 
 [Documentação]()
 
+[Repositório front-end](https://github.com/Gleice-Dourado/labeddit-frontend.git)
+
 ## Index
 - <a href="#funcionalidades">Funcionalidades da Aplicação</a>
 - <a href="#execucao">Como Executar a Aplicação</a>
