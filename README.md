@@ -69,7 +69,7 @@ $ npm run dev
  - Comment a post by id
     -   app.post => 'https://labeddit-back-jsboz.onrender.com/posts/:id/comment'
 
-## Tecnologies used
+## Tecnologias usadas
 1. TypeScript
 2. [Node.js](https://nodejs.org/en)
 3. [Express](https://expressjs.com/pt-br/)
