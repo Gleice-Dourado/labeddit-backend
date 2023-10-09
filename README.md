@@ -82,6 +82,6 @@ $ npm run dev
 10. [Json Web Token](https://jwt.io/)
 11. Layered Architecture
 
-## Developer
+## Desenvolvedor(a)
 [LinkedIn](https://www.linkedin.com/in/gleicielen-dourado/)
 
